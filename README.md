@@ -25,6 +25,7 @@ __ __
 import atmos
 
 if __name__ == '__main__':
+    atmos.clear() # clears terminal/cmd window.
     number = atmos.randint(0, 10, 1)
     print(number)
 
