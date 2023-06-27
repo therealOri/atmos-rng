@@ -15,5 +15,5 @@ setuptools.setup(
     description="A simple random generator based off of atmospheric noise instead of math.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/therealOri/Atmos",
+    url="https://github.com/therealOri/atmos-rng",
 )
