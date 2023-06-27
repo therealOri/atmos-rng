@@ -24,7 +24,7 @@ __ __
 
 # Ussage and Info
 ```python
-import atmos-rng
+import atmos
 
 if __name__ == '__main__':
     atmos.clear() # clears terminal/cmd window.
