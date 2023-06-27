@@ -1,4 +1,4 @@
-Atmos is a randomness generator based off of atmospheric noise instead of math to generate numbers, make choices, and shuffle lists. It does what you'd think it does, and can be used as an alternative to "random" and Maaayyybee "secrets" if you want something abit more special.
+Atmos-rng is a randomness generator based off of atmospheric noise instead of math to generate numbers, make choices, and shuffle lists. It does what you'd think it does, and can be used as an alternative to "random" and Maaayyybee "secrets" if you want something abit more special.
 
 - Special credits to [random.org](https://random.org/).
 
@@ -8,14 +8,14 @@ Atmos is a randomness generator based off of atmospheric noise instead of math t
 # Installation
  > [Directly from here/this repo.]
 ```bash
-[therealOri ~]$ pip install git+https://github.com/therealOri/Atmos
+[therealOri ~]$ pip install git+https://github.com/therealOri/atmos-rng
 ```
 
 or
 
 > [From Pypi.]
 ```bash
-[therealOri ~]$ pip install Atmos
+[therealOri ~]$ pip install atmos-rng
 ```
 __ __
 
@@ -24,7 +24,7 @@ __ __
 
 # Ussage and Info
 ```python
-import atmos
+import atmos-rng
 
 if __name__ == '__main__':
     atmos.clear() # clears terminal/cmd window.
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     scrambled = atmos.shuffle(stuff)
     print(scrambled)
 ```
-You can find more information here: [Documentation](https://github.com/therealOri/Atmos/blob/main/DOCS.md).
+You can find more information here: [Documentation](https://github.com/therealOri/atmos-rng/blob/main/DOCS.md).
 __ __
 
 <br />
