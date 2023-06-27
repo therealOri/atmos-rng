@@ -1,5 +1,7 @@
 Atmos is a randomness generator based off of atmospheric noise instead of math to generate numbers, make choices, and shuffle lists. It does what you'd think it does, and can be used as an alternative to "random" and Maaayyybee "secrets" if you want something abit more special.
 
+- Special credits to [random.org](https://random.org/).
+
 <br>
 <br>
 
