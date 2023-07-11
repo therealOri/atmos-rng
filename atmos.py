@@ -91,6 +91,29 @@ def shuffle(list_of_data):
 
 
 
+def gen_bytes(length):
+    if not isinstance(length, int):
+        raise ValueError(f'\n\nInvalid type, "gen_bytes()" takes integers, value given is "{type(length)}".')
+    else:
+        byte_array = bytearray()
+        if length == 1:
+            for _ in range(length):
+                number = randint(0, 255, 1)
+                byte_array.append(number)
+            return bytes(byte_array)
+        elif length > 1:
+            list_of_numbers = randint(0, 255, length)
+            for number in list_of_numbers:
+                byte_array.append(int(number))
+            return bytes(byte_array)
+        else:
+            list_of_numbers = randint(0, 255, 32)
+            for number in list_of_numbers:
+                byte_array.append(int(number))
+            return bytes(byte_array)
+
+
+
 
 
 if __name__ == '__main__':
