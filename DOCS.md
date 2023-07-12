@@ -44,6 +44,25 @@ __ __
 __ __
 
 <br>
+
+# Gen_bits
+- `gen_bits(25)`
+
+  This function will allow you to generate random bits. It works the same if not similarly to how `secrets` works in that it will return an `int` with xyz amount of bits. The argument passed to this function MUST be `<class 'int'>`.
+__ __
+
+<br>
+
+# Bytes_urlsafe
+- `bytes_urlsafe(20)`
+> Dev Note:
+>
+> This function can be called without passing anything to the function. It will return a base64 encoded string of `20` bytes by `default`. You can also pass `length=None` and it will do the same.
+
+  This function will allow you to generate a base64 urlsafe encoded string of random bytes. This function will work similarly or the same-ish to [secrets.token_urlsafe](https://docs.python.org/3/library/secrets.html#secrets.token_urlsafe) in its purpose but still based off of atmospheric noise.
+__ __
+
+<br>
 <br>
 
 This documentation is not 100% set it stone and will be updated with more information, features, and changes as time goes on.
