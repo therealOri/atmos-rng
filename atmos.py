@@ -1,6 +1,7 @@
 import os
 import requests
 import re
+import base64
 
 
 def clear():
@@ -93,7 +94,7 @@ def shuffle(list_of_data):
 
 def gen_bytes(length):
     if not isinstance(length, int):
-        raise ValueError(f'\n\nInvalid type, "gen_bytes()" takes integers, value given is "{type(length)}".')
+        raise ValueError(f'\n\nInvalid type, "gen_bytes()" takes type "int", value given is "{type(length)}".')
     else:
         byte_array = bytearray()
         if length == 1:
@@ -101,16 +102,60 @@ def gen_bytes(length):
                 number = randint(0, 255, 1)
                 byte_array.append(number)
             return bytes(byte_array)
+
         elif length > 1:
             list_of_numbers = randint(0, 255, length)
             for number in list_of_numbers:
                 byte_array.append(int(number))
             return bytes(byte_array)
+
         else:
             list_of_numbers = randint(0, 255, 32)
             for number in list_of_numbers:
                 byte_array.append(int(number))
             return bytes(byte_array)
+
+
+
+
+
+def gen_bits(length):
+    if not isinstance(length, int):
+        raise ValueError(f'\n\nInvalid type, "gen_bits()" takes type "int", value given is "{type(length)}".')
+    else:
+        if k == 1:
+            bit = randint(0, 1, 1)
+            result = 0
+            result = (result << 1) | int(bit)
+            return result
+
+        elif k > 1:
+            bits = randint(0, 1, length)
+            result = 0
+            for bit in bits:
+                result = (result << 1) | int(bit)
+            return result
+
+        else:
+            bits = randint(0, 1, 32)
+            result = 0
+            for bit in bits:
+                result = (result << 1) | int(bit)
+            return result
+
+
+
+
+#20 is the default if no argument is passed and the function is just called.
+def bytes_urlsafe(length=20):
+    if not isinstance(length, (int, type(None))):
+        raise ValueError(f'\n\nInvalid type, "bytes_urlsafe()" takes type "int" or "None", value given is "{type(length)}".')
+    else:
+        if not length:
+            length=20 #default if None is provided.
+        bytes_to_make_safe = gen_bytes(length)
+        urlsafe_token = base64.urlsafe_b64encode(bytes_to_make_safe)
+        return urlsafe_token.decode()
 
 
 
