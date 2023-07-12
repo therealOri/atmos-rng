@@ -38,8 +38,14 @@ if __name__ == '__main__':
     scrambled = atmos.shuffle(stuff)
     print(scrambled)
 
-    random_bytes = gen_bytes(32)
+    random_bytes = atmos.gen_bytes(32)
     print(f"{random_bytes}\n{len(random_bytes)}")
+
+    random_bits = atmos.gen_bits(25)
+    print(random_bits)
+
+    urlsafe_bytes = atmos.bytes_urlsafe(20)
+    print(urlsafe_bytes)
 ```
 You can find more information here: [Documentation](https://github.com/therealOri/atmos-rng/blob/main/DOCS.md).
 __ __
