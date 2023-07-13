@@ -123,13 +123,13 @@ def gen_bits(length):
     if not isinstance(length, int):
         raise ValueError(f'\n\nInvalid type, "gen_bits()" takes type "int", value given is "{type(length)}".')
     else:
-        if k == 1:
+        if length == 1:
             bit = randint(0, 1, 1)
             result = 0
             result = (result << 1) | int(bit)
             return result
 
-        elif k > 1:
+        elif length > 1:
             bits = randint(0, 1, length)
             result = 0
             for bit in bits:
