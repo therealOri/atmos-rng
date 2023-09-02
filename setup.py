@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="atmos-rng",
-    version="1.0.2.1",
+    version="1.0.3",
     author="therealOri",
     license="GPL-3.0",
     install_requires=[
