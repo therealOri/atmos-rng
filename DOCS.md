@@ -8,7 +8,7 @@ __ __
 # Randint
 - `randint(minimum, maximum, how_many)`
 
-  This function allows you to generate random numbers/integers. If `how_many` is more than 1, it will retun a list of random numbers as type `str`. (for now)
+  This function allows you to generate random numbers/integers. If `how_many` is more than 1, it will retun a list of random numbers as type `int`.
 
 <br>
 
