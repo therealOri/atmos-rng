@@ -28,7 +28,7 @@ __ __
 # Shuffle
 - `shuffle(list_of_data)`
 
-  This function will shuffle/move items/options around in the provided list of data. The types it can work with and shuffle are as follows; `list, tuple, dictionary`. It can **NOT** work with type `set` as they are based off of hashes/hash tables and can't really be shuffled around. They are also automatically ordered/sorted and would negate the shuffling.
+  This function will shuffle/move items/options around in the provided list of data. The types it can work with and shuffle are as follows; `list, tuple, dictionary, str`. It can **NOT** work with type `set` as they are based off of hashes/hash tables and can't really be shuffled around. They are also automatically ordered/sorted and would negate the shuffling.
 
 > Dev Note;
 >
