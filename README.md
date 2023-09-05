@@ -5,6 +5,15 @@ Atmos-rng is a randomness generator based off of atmospheric noise instead of ma
 <br>
 <br>
 
+# Updates
+> 09/05/23
+- `choice()` can now work with strings.
+- `shuffle()` now has the ability to shuffle strings.
+__ __
+
+<br>
+<br>
+
 # Installation
  > [Directly from here/this repo.]
 ```bash
