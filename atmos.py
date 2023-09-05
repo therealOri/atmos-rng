@@ -34,7 +34,7 @@ def choice(list_of_data):
     index = randint(0, maximum, 1)
 
     #List or tuple
-    if isinstance(list_of_data, (list, tuple)):
+    if isinstance(list_of_data, (list, tuple, str)):
         option = list_of_data[index]
         return option
 
@@ -60,24 +60,32 @@ def choice(list_of_data):
 
 def shuffle(list_of_data):
     if isinstance(list_of_data, list):
-        random_numbers = [int(num) for num in randint(0, len(list_of_data)-1, len(list_of_data))]
+        random_numbers = [num for num in randint(0, len(list_of_data)-1, len(list_of_data))]
         for i, j in enumerate(random_numbers):
             list_of_data[i], list_of_data[j] = list_of_data[j], list_of_data[i]
         return list_of_data
 
     elif isinstance(list_of_data, tuple):
         list_of_data = list(list_of_data)
-        random_numbers = [int(num) for num in randint(0, len(list_of_data)-1, len(list_of_data))]
+        random_numbers = [num for num in randint(0, len(list_of_data)-1, len(list_of_data))]
         for i, j in enumerate(random_numbers):
             list_of_data[i], list_of_data[j] = list_of_data[j], list_of_data[i]
         return tuple(list_of_data)
 
     elif isinstance(list_of_data, dict):
         list_of_data = list(list_of_data.items())
-        random_numbers = [int(num) for num in randint(0, len(list_of_data)-1, len(list_of_data))]
+        random_numbers = [num for num in randint(0, len(list_of_data)-1, len(list_of_data))]
         for i, j in enumerate(random_numbers):
             list_of_data[i], list_of_data[j] = list_of_data[j], list_of_data[i]
         return dict(list_of_data)
+
+    elif isinstance(list_of_data, str):
+        random_numbers = [num for num in randint(0, len(list_of_data)-1, len(list_of_data))]
+        chars = list(list_of_data)
+        for i, j in enumerate(random_numbers):
+            chars[i], chars[j] = chars[j], chars[i]
+        list_of_data = ''.join(chars)
+        return list_of_data
     else:
         raise ValueError('\nUnable to shuffle data. The data provided is not a list, tuple, or dictionary.')
 
