@@ -15,7 +15,7 @@ __ __
 # Choice
 - `choice(list_of_data)`
 
-  This function will randomly pick an item/option from a list of items/options. The types it can choose from are as follows; `list, tuple, dictionary, sets`. If a dictionary is used/passed to the function, you will get returned type `dictionary`.
+  This function will randomly pick an item/option from a list of items/options. The types it can choose from are as follows; `list, tuple, dictionary, set, str`. If a dictionary is used/passed to the function, you will get returned type `dictionary`.
 
 > Dev Note;
 >
